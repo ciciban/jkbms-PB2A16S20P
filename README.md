@@ -51,3 +51,5 @@ BatCurrent = 0.000 Amper
 Temp1 = 23.3 C
 Temp2 = 23.3 C
 ```
+# Documentation
+All Register are in BMS.RS485.Modbus.V1.0.pdf (mostly chinese)
