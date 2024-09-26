@@ -15,9 +15,13 @@ Use apt or yum/dnf to install ModBus and others libs:
 apt install libmodbus-dev build-essential libc6-dev
 
 cc -I /usr/include/modbus JK16S-modbus-get-data.c -L /usr/lib/aarch64-linux-gnu/ -lmodbus -o JK16S-modbus-get-data
-
+```
+Run it
+```
 ./JK16S-modbus-get-data -i 1 -d /dev/ttyUSB0
-
+```
+Output on stdout
+```
 ID=1, USBdev=/dev/ttyUSB0, 115200, 8N1
 ID=1, USBdev=/dev/ttyUSB0, 115200, 8N1 ... libmodbus context OK
 ID=1, USBdev=/dev/ttyUSB0, 115200, 8N1 ... Connected
