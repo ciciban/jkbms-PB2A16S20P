@@ -80,15 +80,6 @@ int main(int argc, char* argv[])
 	}	
 	printf ("ID=%d, USBdev=%s, 115200, 8N1 ... Slave ID OK\n", idval, devval);
 
-	// modbus_read_input_bits      = The function uses the Modbus function code 0x02 (read input status).
-	// modbus_read_registers       = The function uses the Modbus function code 0x03 (read holding registers).
-	// modbus_read_input_registers = The function uses the Modbus function code 0x04 (read input registers).
-	// The holding registers and input registers have different historical meaning, but nowadays it's more common to use holding registers only.
-
-	// int modbus_read_input_bits     (modbus_t *ctx, int addr, int nb, uint8_t *dest);
-	// int modbus_read_input_registers(modbus_t *ctx, int addr, int nb, uint16_t *dest);
-	// int modbus_read_registers      (modbus_t *ctx, int addr, int nb, uint16_t *dest);
-
 	// get local system time
 	time_t t = time(NULL);
 	struct tm tm = *localtime(&t);
