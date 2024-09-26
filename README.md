@@ -1,6 +1,10 @@
 # jkbms-PB2A16S20P
-JiKong (JK) BMS PB2A16S20P read data over RS-485 and ModBus
+Read data from JiKong (JK) BMS PB2A16S20P over RS-485 and ModBus 
 
+Using CH340 Serial converters
+```
+Bus 002 Device 002: ID 1a86:7523 QinHeng Electronics CH340 serial converter
+```
 Tested on JK-PB2A16S20P and it should work on
 
 - JK-PB1A16S10P
@@ -10,10 +14,16 @@ Tested on JK-PB2A16S20P and it should work on
 
 # Compile and build it on linux
 
-Use apt or yum/dnf to install ModBus and others libs:
+Use apt or yum/dnf to install ModBus and others libs (as root or sudo):
 ```
 apt install libmodbus-dev build-essential libc6-dev
-
+```
+Add your user to following groups (as root or sudo)
+```
+usermod -a -G tty,dialout Your_User
+```
+Compile and build
+```
 cc -I /usr/include/modbus JK16S-modbus-get-data.c -L /usr/lib/aarch64-linux-gnu/ -lmodbus -o JK16S-modbus-get-data
 ```
 Run it
